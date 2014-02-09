@@ -1,0 +1,17 @@
+#
+# .gitignore
+#
+
+/.cachebust
+/.git.*/
+/.gitignore.*
+/.tmp/
+/client/js/node_modules/bower_components/
+/client-built/
+/config/development.json
+/config/heroku.json
+/config/production.json
+/config/testing.json
+/log/
+/node_modules/
+/npm-debug.log
