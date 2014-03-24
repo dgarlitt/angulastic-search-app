@@ -105,7 +105,8 @@
     "rfile": "1.0.0",
     "rfileify": "1.3.1",
     "rhtml": "1.0.0",
-    "uglify-js": "2.4.3"
+    "uglify-js": "2.4.3",
+    "karma-browserify": "0.0.6"
   },
   "scripts": {
     "prepublish": "node npm-scripts prepublish",

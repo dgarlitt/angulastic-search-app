@@ -9,7 +9,7 @@ module.exports = function (config) {
     // base path, that will be used to resolve files and exclude
     basePath: '../..',
 
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'browserify'],
 
     // list of files / patterns to load in the browser
     files: [
@@ -58,6 +58,15 @@ module.exports = function (config) {
     // CLI --browsers Chrome,Firefox,Safari
     browsers: [process.env.TRAVIS ? 'Firefox' : 'Chrome'],
 
+    // config browserify
+    browserify: {
+      watch: true,
+      debug: true
+    },
+
+    // Add preprocessors
+    preprocessors: {'test/client/unit/**/*.js': ['browserify']},
+
     // If browser does not capture in given timeout [ms], kill it
     // CLI --capture-timeout 5000
     captureTimeout: 60000,
@@ -73,7 +82,8 @@ module.exports = function (config) {
     plugins: [
       'karma-mocha',
       'karma-chrome-launcher',
-      'karma-firefox-launcher'
+      'karma-firefox-launcher',
+      'karma-browserify'
     ]
   });
 };
